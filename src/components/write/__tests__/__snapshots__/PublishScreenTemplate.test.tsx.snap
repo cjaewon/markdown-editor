@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PublishScreenTemplate matches snapshot 1`] = `
+<div>
+  <div
+    class="sc-bdVaJa cnqWNu"
+  >
+    <div
+      class="sc-bwzfXH gMgEWS"
+    >
+      <div
+        class="sc-htpNat iigZIp"
+      >
+        left
+      </div>
+      <div
+        class="sc-ifAKCX dZhikv"
+      />
+      <div
+        class="sc-htpNat sc-bxivhb djjBWZ"
+      >
+        right
+      </div>
+    </div>
+  </div>
+</div>
+`;

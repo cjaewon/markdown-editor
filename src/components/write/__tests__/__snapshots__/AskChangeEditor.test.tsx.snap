@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AskChangeEditor matches snapshot 1`] = `
+<div>
+  <div
+    class="sc-bdVaJa kNCPvv"
+  />
+  <div
+    class="sc-bwzfXH fIoYbF"
+  >
+    <div
+      class="sc-htpNat gFFQdP"
+    >
+      <div
+        class="sc-ifAKCX lbyxTT"
+      >
+        <h3>
+          마크다운 에디터로 전환
+        </h3>
+        <div
+          class="message"
+        >
+          에디터 모드를 전환하시겠습니까?
+        </div>
+        <div
+          class="button-area"
+        >
+          <button
+            class="sc-bxivhb lhCsgH"
+            color="lightGray"
+          >
+            취소
+          </button>
+          <button
+            class="sc-bxivhb jvTLUf"
+            color="teal"
+          >
+            확인
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

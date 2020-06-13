@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TagInput matches snapshot 1`] = `
+<div>
+  <div
+    class="sc-bwzfXH kCbYda"
+  >
+    <input
+      class="sc-htpNat dEQGam"
+      placeholder="태그를 입력하세요"
+      tabindex="2"
+      value=""
+    />
+    <div
+      class="sc-bdVaJa bEtHQh"
+    />
+  </div>
+</div>
+`;

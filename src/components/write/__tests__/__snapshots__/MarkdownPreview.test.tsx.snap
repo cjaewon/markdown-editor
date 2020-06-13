@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MarkdownPreview matches snapshot 1`] = `
+<div>
+  <div
+    class="sc-htpNat ixBInR"
+    id="preview"
+  >
+    <h1
+      class="sc-bxivhb cFXJHm"
+    />
+    <div
+      class="sc-bdVaJa epxEIa"
+    >
+      <div
+        class="sc-bwzfXH kcygLR atom-one-light"
+      >
+        
+
+      </div>
+    </div>
+  </div>
+</div>
+`;
