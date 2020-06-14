@@ -57,16 +57,16 @@ const BackButton = styled.button`
 `;
 
 export interface WriteFooterProps {
-  onTempSave: (notify?: boolean) => void;
-  onPublish: () => void;
+  // onTempSave: (notify?: boolean) => void;
+  // onPublish: () => void;
   onGoBack: () => void;
   edit: boolean;
 }
 
 const WriteFooter: React.FC<WriteFooterProps> = ({
   onGoBack,
-  onTempSave,
-  onPublish,
+  // onTempSave,
+  // onPublish,
   edit,
 }) => {
   return (
@@ -76,10 +76,10 @@ const WriteFooter: React.FC<WriteFooterProps> = ({
         <span>나가기</span>
       </BackButton>
       <Group>
-        <StyledButton inline color="lightGray" onClick={() => onTempSave(true)}>
+    <StyledButton inline color="lightGray" /*onClick={() => onTempSave(true)}*/>
           임시저장
         </StyledButton>
-        <StyledButton inline color="teal" onClick={onPublish}>
+        <StyledButton inline color="teal" /*onClick={onPublish}*/>
           {edit ? '수정하기' : '출간하기'}
         </StyledButton>
       </Group>

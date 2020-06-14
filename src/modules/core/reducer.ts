@@ -5,12 +5,12 @@ import {
   SHOW_AUTH_MODAL,
   CHANGE_AUTH_MODAL_MODE,
   CLOSE_AUTH_MODAL,
-  SET_USER,
+  // SET_USER,
   OPEN_POPUP,
   CLOSE_POPUP,
 } from './actions';
 import produce from 'immer';
-import { updateKey } from '../../lib/utils';
+// import { updateKey } from '../../lib/utils';
 
 const initialState: CoreState = {
   layer: false,
@@ -18,7 +18,7 @@ const initialState: CoreState = {
     visible: false,
     mode: 'LOGIN',
   },
-  user: null,
+  // user: null,
   popup: {
     visible: false,
     title: '',
@@ -46,7 +46,7 @@ const core = createReducer<CoreState, CoreAction>(initialState, {
       draft.auth.visible = false;
       draft.layer = false;
     }),
-  [SET_USER]: (state, { payload: user }) => updateKey(state, 'user', user),
+  // [SET_USER]: (state, { payload: user }) => updateKey(state, 'user', user),
   [OPEN_POPUP]: (state, action) =>
     produce(state, draft => {
       draft.popup.title = action.payload.title;

@@ -2,9 +2,9 @@ import React, { useCallback } from 'react';
 import { connect } from 'react-redux';
 import { RootState } from '../../modules';
 import PublishURLSetting from '../../components/write/PublishURLSetting';
-import { escapeForUrl } from '../../lib/utils';
+// import { escapeForUrl } from '../../lib/utils';
 import { changeUrlSlug } from '../../modules/write';
-import { useMount } from 'react-use';
+// import { useMount } from 'react-use';
 
 interface OwnProps {}
 type StateProps = ReturnType<typeof mapStateToProps>;
@@ -14,7 +14,7 @@ export type PublishURLSettingContainerProps = OwnProps &
   DispatchProps;
 
 const mapStateToProps = (state: RootState) => ({
-  username: state.core.user && state.core.user.username,
+  // username: state.core.user && state.core.user.username,
   title: state.write.title,
   urlSlug: state.write.urlSlug,
 });
@@ -23,26 +23,26 @@ const mapDispatchToProps = {
 };
 
 const PublishURLSettingContainer: React.FC<PublishURLSettingContainerProps> = ({
-  username,
+  // username,
   title,
   urlSlug,
   changeUrlSlug,
 }) => {
-  const defaultUrlSlug = escapeForUrl(title);
+  // const defaultUrlSlug = escapeForUrl(title);
   const onChangeUrlSlug = useCallback(
     (urlSlug: string) => changeUrlSlug(urlSlug),
     [changeUrlSlug],
   );
 
-  useMount(() => {
-    if (!urlSlug) {
-      changeUrlSlug(defaultUrlSlug);
-    }
-  });
-  if (!username) return null;
+  // useMount(() => {
+  //   if (!urlSlug) {
+  //     changeUrlSlug(defaultUrlSlug);
+  //   }
+  // });
+  // if (!username) return null;
   return (
     <PublishURLSetting
-      username={username}
+      // username={username}
       urlSlug={urlSlug}
       onChangeUrlSlug={onChangeUrlSlug}
     />

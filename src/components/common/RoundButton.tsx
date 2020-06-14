@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled, { css } from 'styled-components';
 import { buttonColorMap } from '../../lib/styles/palette';
-import { Route } from 'react-router';
+// import { Route } from 'react-router';
 
 type ButtonSize = 'SMALL' | 'DEFAULT' | 'LARGE';
 
@@ -102,19 +102,14 @@ const RoundButton: React.FC<RoundButtonProps> = ({
 }) => {
   if (to) {
     return (
-      <Route
-        render={({ history }) => (
-          <RoundButtonBlock
-            color={color}
-            onClick={e => {
-              e.preventDefault();
-              history.push(to);
-            }}
-            size={size}
-            border={border}
-            {...rest}
-          />
-        )}
+      <RoundButtonBlock
+        color={color}
+        onClick={e => {
+          e.preventDefault();
+        }}
+        size={size}
+        border={border}
+        {...rest}
       />
     );
   }

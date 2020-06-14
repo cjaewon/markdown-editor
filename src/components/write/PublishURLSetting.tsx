@@ -26,13 +26,13 @@ const Input = styled.input`
 `;
 
 export interface PublishURLSettingProps {
-  username: string;
+  // username: string;
   urlSlug: string;
   onChangeUrlSlug: (urlSlug: string) => void;
 }
 
 const PublishURLSetting: React.FC<PublishURLSettingProps> = ({
-  username,
+  // username,
   urlSlug,
   onChangeUrlSlug,
 }) => {
@@ -43,7 +43,7 @@ const PublishURLSetting: React.FC<PublishURLSettingProps> = ({
   return (
     <PublishURLSettingBlock title="URL 설정">
       <URLTextBlock>
-        <div className="username">/@{username}/</div>
+        {/* <div className="username">/@{username}/</div> */}
         <Input value={urlSlug} onChange={onChange} />
       </URLTextBlock>
     </PublishURLSettingBlock>

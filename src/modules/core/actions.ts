@@ -1,6 +1,6 @@
 import { deprecated } from 'typesafe-actions';
 import { AuthMode } from './types';
-import { CurrentUser } from '../../lib/graphql/user';
+// import { CurrentUser } from '../../lib/graphql/user';
 
 const { createStandardAction } = deprecated;
 
@@ -18,7 +18,7 @@ export const changeAuthModalMode = createStandardAction(CHANGE_AUTH_MODAL_MODE)<
   AuthMode
 >();
 export const closeAuthModal = createStandardAction(CLOSE_AUTH_MODAL)();
-export const setUser = createStandardAction(SET_USER)<CurrentUser | null>();
+// export const setUser = createStandardAction(SET_USER)<CurrentUser | nulㅍl>();
 
 export const openPopup = createStandardAction(OPEN_POPUP)<{
   title?: string;

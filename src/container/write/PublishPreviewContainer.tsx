@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import { RootState } from '../../modules';
 import PublishPreview from '../../components/write/PublishPreview';
 import { changeDescription, setThumbnail } from '../../modules/write';
-import useUpload from '../../lib/hooks/useUpload';
-import useS3Upload from '../../lib/hooks/useS3Upload';
+// import useUpload from '../../lib/hooks/useUpload';
+// import useS3Upload from '../../lib/hooks/useS3Upload';
 
 const mapStateToProps = (state: RootState) => ({
   title: state.write.title,
@@ -39,8 +39,8 @@ const PublishPreviewContainer: React.FC<PublishPreviewContainerProps> = ({
     [changeDescription],
   );
 
-  const [upload, file] = useUpload();
-  const [s3Upload, image] = useS3Upload();
+  // const [upload, file] = useUpload();
+  // const [s3Upload, image] = useS3Upload();
 
   // fills description with defaultDescription when it is empty
   useEffect(() => {
@@ -54,20 +54,20 @@ const PublishPreviewContainer: React.FC<PublishPreviewContainerProps> = ({
   }, [changeDescription, defaultDescription, description]);
 
   const onUpload = () => {
-    upload();
+    // upload();
   };
 
-  useEffect(() => {
-    if (!file) return;
-    s3Upload(file, {
-      type: 'post',
-    });
-  }, [file, s3Upload]);
+  // useEffect(() => {
+  //   if (!file) return;
+  //   s3Upload(file, {
+  //     type: 'post',
+  //   });
+  // }, [file, s3Upload]);
 
-  useEffect(() => {
-    if (!image) return;
-    setThumbnail(image);
-  }, [image, setThumbnail]);
+  // useEffect(() => {
+  //   if (!image) return;
+  //   setThumbnail(image);
+  // }, [image, setThumbnail]);
 
   const onResetThumbnail = useCallback(() => {
     setThumbnail(null);

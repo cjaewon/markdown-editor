@@ -268,7 +268,7 @@ const MarkdownRender: React.FC<MarkdownRenderProps> = ({
         try {
           const el = parse(html);
           setHasTagError(false);
-          setElement(el);
+          setElement(el as any);
         } catch (e) {}
     }, 1)
     });

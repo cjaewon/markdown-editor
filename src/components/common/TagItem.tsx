@@ -1,8 +1,8 @@
 import * as React from 'react';
 import styled, { css } from 'styled-components';
 import palette from '../../lib/styles/palette';
-import { Link } from 'react-router-dom';
-import { escapeForUrl } from '../../lib/utils';
+// import { Link } from 'react-router-dom';
+// import { escapeForUrl } from '../../lib/utils';
 import media from '../../lib/styles/media';
 
 type TagItemProps = {
@@ -12,7 +12,7 @@ type TagItemProps = {
 
 const TagItem: React.FC<TagItemProps> = ({ name, link }) => {
   if (link) {
-    return <TagLink to={`/tags/${escapeForUrl(name)}`}>{name}</TagLink>;
+    return <TagLink>{name}</TagLink>
   }
   return <TagDiv>{name}</TagDiv>;
 };
@@ -21,7 +21,7 @@ const tagStyle = css`
   margin-bottom: 0.875rem;
   background: ${palette.gray1};
   padding-left: 1rem;
-  padding-right: 1rem;
+  padding-right: 1rem;v
   height: 2rem;
   border-radius: 1rem;
   display: inline-flex;
@@ -46,7 +46,7 @@ const TagDiv = styled.div`
   ${tagStyle}
 `;
 
-const TagLink = styled(Link)`
+const TagLink = styled.div`
   ${tagStyle}
   &:hover {
     background: ${palette.gray0};

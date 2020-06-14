@@ -28,8 +28,8 @@ export interface MarkdownEditorProps {
   markdown: string;
   tagInput: React.ReactNode;
   footer: React.ReactNode;
-  onUpload: () => void;
-  lastUploadedImage: string | null;
+  // onUpload: () => void;
+  // lastUploadedImage: string | null;
   initialBody: string;
 }
 
@@ -240,18 +240,18 @@ export default class WriteMarkdownEditor extends React.Component<
   };
 
   componentDidUpdate(prevProps: MarkdownEditorProps) {
-    const { lastUploadedImage, initialBody } = this.props;
-    if (initialBody !== prevProps.initialBody) {
-      if (!this.codemirror) return;
-      if (this.codemirror.getValue() === this.props.initialBody) return;
-      this.codemirror.setValue(this.props.initialBody);
-    }
-    if (
-      lastUploadedImage &&
-      prevProps.lastUploadedImage !== lastUploadedImage
-    ) {
-      this.addImageToEditor(lastUploadedImage);
-    }
+    // const { /* lastUploadedImage, */ initialBody } = this.props;
+    // if (initialBody !== prevProps.initialBody) {
+    //   if (!this.codemirror) return;
+    //   if (this.codemirror.getValue() === this.props.initialBody) return;
+    //   this.codemirror.setValue(this.props.initialBody);
+    // }
+    // if (
+    //   lastUploadedImage &&
+    //   prevProps.lastUploadedImage !== lastUploadedImage
+    // ) {
+    //   this.addImageToEditor(lastUploadedImage);
+    // }
   }
 
   componentDidMount() {
@@ -479,7 +479,7 @@ export default class WriteMarkdownEditor extends React.Component<
         setCursorPos(cursorPos + 5);
       },
       image: () => {
-        this.props.onUpload();
+        // this.props.onUpload();
       },
     };
 
@@ -787,7 +787,7 @@ export default class WriteMarkdownEditor extends React.Component<
         this.handleOpenAddLink();
       },
       image: () => {
-        this.props.onUpload();
+        // this.props.onUpload();
       },
       codeblock: () => {
         const selected = doc.getSelection();
