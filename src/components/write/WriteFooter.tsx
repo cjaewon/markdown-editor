@@ -74,7 +74,7 @@ const WriteFooter: React.FC<WriteFooterProps> = ({
           임시저장
         </StyledButton>
         <StyledButton inline color="teal" /*onClick={onPublish}*/>
-          {edit ? '수정하기' : '출간하기'}
+          저장하기
         </StyledButton>
       </Group>
     </WriteFooterBlock>
