@@ -13,13 +13,13 @@ const PublishActionButtonsBlock = styled.div`
 
 export interface PublishActionButtonsProps {
   onCancel: () => void;
-  // onPublish: () => void;
+  onSave: () => void; // onPublish
   // edit: boolean;
 }
 
 const PublishActionButtons: React.FC<PublishActionButtonsProps> = ({
   onCancel,
-  // onPublish,
+  onSave, // onPublish
   // edit,
 }) => {
   return (
@@ -32,7 +32,7 @@ const PublishActionButtons: React.FC<PublishActionButtonsProps> = ({
       >
         취소
       </Button>
-      <Button size="large" data-testid="publish" /*onClick={onPublish}*/>
+      <Button size="large" data-testid="publish" onClick={onSave}>
         저장하기
       </Button>
     </PublishActionButtonsBlock>

@@ -56,7 +56,7 @@ const StyledButton = styled(Button)`
 
 export interface WriteFooterProps {
   // onTempSave: (notify?: boolean) => void;
-  // onPublish: () => void;
+  onSave: () => void; // onPublish
   onGoBack: () => void;
   edit: boolean;
 }
@@ -64,7 +64,7 @@ export interface WriteFooterProps {
 const WriteFooter: React.FC<WriteFooterProps> = ({
   onGoBack,
   // onTempSave,
-  // onPublish,
+  onSave,
   edit,
 }) => {
   return (
@@ -73,7 +73,7 @@ const WriteFooter: React.FC<WriteFooterProps> = ({
       <StyledButton inline color="lightGray" /*onClick={() => onTempSave(true)}*/>
           임시저장
         </StyledButton>
-        <StyledButton inline color="teal" /*onClick={onPublish}*/>
+        <StyledButton inline color="teal" onClick={onSave}>
           저장하기
         </StyledButton>
       </Group>

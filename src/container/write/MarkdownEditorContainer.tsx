@@ -113,7 +113,7 @@ const MarkdownEditorContainer: React.FC<MarkdownEditorContainerProps> = () => {
       });
   };
 
-  const onPublish = useCallback(() => {
+  const onSave = useCallback(() => {
     // (/#(.*?)\n/g, '').replace(/\n/g, '')
     remark()
       .use(strip)
@@ -273,7 +273,7 @@ const MarkdownEditorContainer: React.FC<MarkdownEditorContainerProps> = () => {
         tagInput={<TagInputContainer />}
         footer={
           <WriteFooter
-            // onPublish={onPublish}
+            onSave={onSave}
             // onTempSave={onTempSave}
             onGoBack={onGoBack}
             edit={!!postId && !isTemp}
