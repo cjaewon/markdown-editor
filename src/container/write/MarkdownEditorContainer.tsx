@@ -39,7 +39,7 @@ import { bindActionCreators } from 'redux';
 // import useSaveHotKey from './hooks/useSaveHotkey';
 import embedPlugin from '../../lib/remark/embedPlugin';
 import { Helmet } from 'react-helmet-async';
-// import { toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import useDownload from '../../lib/hooks/useDownload';
 // import { usePrevious } from 'react-use';
 
@@ -118,6 +118,8 @@ const MarkdownEditorContainer: React.FC<MarkdownEditorContainerProps> = () => {
 
   const onSave = useCallback(() => {
     // (/#(.*?)\n/g, '').replace(/\n/g, '')
+    if (title.trim().length === 0) return toast.error('제목을 입력해주세요!');
+
     const header = 
 `---
 title: ${title}
