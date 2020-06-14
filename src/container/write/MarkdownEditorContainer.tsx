@@ -122,7 +122,8 @@ const MarkdownEditorContainer: React.FC<MarkdownEditorContainerProps> = () => {
 `---
 title: ${title}
 tags: [${tags.join(', ')}]
----`;
+---
+`;
     onDownload(title, header + markdown);
 
     // remark()
