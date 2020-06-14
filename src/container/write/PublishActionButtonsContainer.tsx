@@ -15,7 +15,7 @@ import { pick } from 'ramda';
 
 // import { setHeadingId } from '../../lib/heading';
 // import { useHistory } from 'react-router';
-import { toast } from 'react-toastify';
+// import { toast } from 'react-toastify';
 
 type PublishActionButtonsContainerProps = {};
 
@@ -79,15 +79,15 @@ const PublishActionButtonsContainer: React.FC<PublishActionButtonsContainerProps
       // const { user, url_slug } = response.data.writePost;
       // await client.resetStore();
       // history.push(`/@${user.username}/${url_slug}`);
-  }; // onPublish
-
+    }; // onPublish
+  }
   // const onEdit = async () => {
   //   const response = await editPost({
   //     variables: {
   //       id: options.postId,
   //       ...variables,
   //     },
-  //   });
+  //   });s
   //   if (!response || !response.data) return;
   //   const { user, url_slug } = response.data.editPost;
   //   await client.resetStore();
