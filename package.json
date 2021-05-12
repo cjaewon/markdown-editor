@@ -20,7 +20,7 @@
     "@types/sanitize-html": "^1.23.2",
     "@types/styled-components": "^5.1.0",
     "@types/throttle-debounce": "^2.1.0",
-    "codemirror": "^5.54.0",
+    "codemirror": "^5.58.2",
     "date-fns": "^2.14.0",
     "gh-pages": "^3.0.0",
     "html-react-parser": "^0.13.0",
